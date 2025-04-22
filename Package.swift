@@ -8,6 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "AdiscopeMediaMaxAdapterDT",
+            type: .dynamic,
             targets: ["AdiscopeMediaMaxDTTarget"]),
     ],
     dependencies: [
