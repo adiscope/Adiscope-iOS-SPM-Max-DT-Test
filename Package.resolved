@@ -1,15 +1,14 @@
 {
-  "originHash" : "001397463186c5abcbfb520b2f424884230ae37f09cc7e683a0edc5f0dd2bc7f",
   "pins" : [
     {
       "identity" : "applovin-max-swift-package",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
       "state" : {
-        "revision" : "ed8cb1fddca69b5ea52b379deb7e57ccb8d901de",
-        "version" : "13.1.0"
+        "revision" : "c184b428415a05dcad488c6834e0bd02fe1d8f3e",
+        "version" : "13.3.1"
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }
