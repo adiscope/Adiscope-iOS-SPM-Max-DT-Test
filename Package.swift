@@ -5,33 +5,40 @@ import PackageDescription
 
 let package = Package(
     name: "AdiscopeMediaMaxAdapterDT",
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "AdiscopeMediaMaxAdapterDT",
             targets: ["AdiscopeMediaMaxDTTarget"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.3.1"),
+        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.5.1"),
     ],
     targets: [
         .target(
             name: "AdiscopeMediaMaxDTTarget",
             dependencies: [
-              .target(name: "AdiscopeMediaMaxAdapterDT"),
-              .target(name: "IASDKCore"),
-              .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
+                .target(name: "REVUPMediaMaxAdapterMoloco"),
+                .target(name: "REVUPMediaMaxAdapterMolocoMediationAdapter"),
+                .target(name: "MolocoSDK"),
+                .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
             ],
             path: "Sources"
         ),
         .binaryTarget(
-          name: "AdiscopeMediaMaxAdapterDT",
-          url: "https://github.com/adiscope/Adiscope-iOS-Developer/releases/download/2.1.5/AdiscopeMediaMaxAdapterDTExchange.zip",
-          checksum: "d8083f9bd1ed6b07e55b02d39cce23c5c57a9f995a8625b7b034a1a7dbd2b7d2"
+            name: "REVUPMediaMaxAdapterMoloco",
+            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/REVUPMediaMaxAdapterMoloco.zip",
+            checksum: "e5af035c8aab68c00b75a6483d81567b99e9fb185ca039546e4d4864eb40c7f0"
         ),
         .binaryTarget(
-          name: "IASDKCore",
-          url: "https://github.com/adiscope/Adiscope-iOS-Developer/releases/download/2.1.5/IASDKCore.xcframework.zip",
-          checksum: "965104672eca9b2d0f22b3fabadcd5434e56849d5c366021b4c65741031acea5"
+            name: "REVUPMediaMaxAdapterMolocoMediationAdapter",
+            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/AppLovinMediationMolocoAdapter.xcframework.zip",
+            checksum: "02f625f5ec197b00e4639c68d149b62968a9ffd50d88b981c076f9a5b11b42cd"
+        ),
+        .binaryTarget(
+            name: "MolocoSDK",
+            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/MolocoSDK.xcframework.zip",
+            checksum: "0e0deaec5993d71e13a67328ed4fd8ecc74f9bdb89527dbabc18126c3bdfb80b"
         ),
     ]
 )
